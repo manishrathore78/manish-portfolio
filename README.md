@@ -18,8 +18,8 @@ https://manish-portfolio-w.netlify.app/
 
 ## 📞 Contact
 - WhatsApp: https://wa.me/917805878366
-- Email: yourmail@gmail.com
-- Instagram: yourprofile
+- Email: gangaramnayak7113@gmail.com
+- Instagram: https://www.instagram.com/manishwebstudio45?igsh=Zjk2dWM1ZGF5end5
 
 ---
 
