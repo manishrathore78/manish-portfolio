@@ -3,7 +3,7 @@
 This is my personal portfolio website showcasing my projects and skills.
 
 ## 🌐 Live Demo
-https://your-live-link.netlify.app
+https://manish-portfolio-w.netlify.app/
 
 ## 💼 Features
 - Responsive Design
@@ -17,9 +17,9 @@ https://your-live-link.netlify.app
 - JavaScript
 
 ## 📞 Contact
-- WhatsApp: https://wa.me/91XXXXXXXXXX
-- Email: yourmail@gmail.com
-- Instagram: yourprofile
+- WhatsApp: https://wa.me/7805878366
+- Email: gangaramnayak7113@gmail.com
+- Instagram: https://www.instagram.com/manishwebstudio45?igsh=Zjk2dWM1ZGF5end5
 
 ---
 
