@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manish Nayak | Frontend Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg,#0a66c2,#1e90ff);
+  color: white;
+}
+
+/* GLASS CARD */
+.card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  margin: 15px;
+  border-radius: 15px;
+  animation: fadeUp 1s ease;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header img {
+  width: 120px;
+  border-radius: 50%;
+}
+
+.btn {
+  background: white;
+  color: #0a66c2;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 15px;
+}
+
+@media(min-width: 700px){
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* FORM */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: none;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="https://i.pravatar.cc/150">
+  <h1>Manish Nayak</h1>
+  <p>Frontend Developer | High Converting Websites</p>
+  <a class="btn" href="https://wa.me/917805878366">Hire Me</a>
+</header>
+
+<div class="card">
+  <h2>About Me</h2>
+  <p>I build premium websites that generate leads and grow your business online.</p>
+</div>
+
+<div class="card">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div>
+      <img src="https://source.unsplash.com/400x300/?mehndi">
+      <p>Mehndi Artist Website</p>
+    </div>
+    <div>
+      <img src="https://source.unsplash.com/400x300/?makeup">
+      <p>Makeup Artist Website</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Testimonials</h2>
+  <p>⭐ “Amazing website, got more clients!”</p>
+  <p>⭐ “Very professional and fast delivery”</p>
+</div>
+
+<div class="card">
+  <h2>Contact Me</h2>
+
+  <form id="form">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="phone" placeholder="Your Phone" required>
+    <textarea id="msg" placeholder="Your Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+
+</div>
+
+<footer>
+© 2026 Manish Nayak
+</footer>
+
+<script>
+// EMAILJS CONFIG (later replace)
+function sendEmail(name, phone, msg){
+  console.log("Email sent", name, phone, msg);
+}
+
+document.getElementById("form").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let msg = document.getElementById("msg").value;
+
+  // SAVE
+  let leads = JSON.parse(localStorage.getItem("leads")) || [];
+  leads.push({name, phone, msg});
+  localStorage.setItem("leads", JSON.stringify(leads));
+
+  // WHATSAPP
+  let url = "https://wa.me/917805878366?text="
+  + "Name: " + name + "%0aPhone: " + phone + "%0aMessage: " + msg;
+
+  window.open(url, "_blank");
+
+  // EMAIL (future)
+  sendEmail(name, phone, msg);
+
+  alert("Enquiry Sent 🚀");
+});
+</script>
+
+</body>
+</html>
